@@ -1,27 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>아정당 베이비페어 이벤트</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #000;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>아정당 베이비페어 이벤트</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .click-area {
+      position: absolute;
+      left: 50%;
+      top: 73%; /* 이미지 높이의 73% 지점에 위치 */
+      transform: translateX(-50%);
+      width: 75%;  /* 가로 넓이: 이미지의 60% */
+      height: 6%;  /* 세로 높이: 이미지의 6% */
+      z-index: 10;
+      /* 디버깅 시 아래 색상 주석 해제해서 위치 확인 가능 */
+      /* background-color: rgba(255, 0, 0, 0.3); */
+    }
+  </style>
 </head>
 <body>
-    <img src="베이비페어.jpg" usemap="#eventmap" alt="이벤트 이미지">
-    <map name="eventmap">
-        <area shape="rect" coords="150,1500,580,1600" href="https://walla.my/v/PobOlLDav8fdaQLVnL0f" alt="설문 참여하기" target="_blank">
-    </map>
+  <div class="container">
+    <img src="베이비페어.jpg" alt="아정당 설문조사 이벤트" />
+    <a
+      class="click-area"
+      href="https://walla.my/v/PobOlLDav8fdaQLVnL0f"
+      target="_blank"
+      title="설문 참여하기"
+    ></a>
+  </div>
 </body>
 </html>
